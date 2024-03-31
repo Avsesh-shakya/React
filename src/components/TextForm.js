@@ -7,6 +7,8 @@ export default function TextForm(props) {
     backgraundColor:'black',
 
   }  
+  let button={margin:'5px 10px'}
+ 
 
 
     const handleUpClick = () => {
@@ -38,11 +40,10 @@ export default function TextForm(props) {
         <div className="textbox">
             <textarea name="text" id="text" value={text} onChange={handleOnChange} cols="86" rows="10"></textarea>
         </div>
-        <button className='btn btn-primary'onClick={handleUpClick}>Convert to UpperCase</button>
-        <button className='btn btn-primary'onClick={handleLowClick}>Convert to LowarCase</button>
-        <button type="button" className="btn btn-success">Success</button>
-        
-    
+
+        <button type="button" class="btn btn-outline-primary"onClick={handleUpClick} style={button}>Convert to UpperCase</button>
+        <button type="button" class="btn btn-outline-primary"onClick={handleLowClick} style={button}>Convert to LowarCase</button>
+        <button type="button" class="btn btn-outline-primary" style={button}>Success</button>
       
         <h1>Your Text Summary</h1>
         <p>{text.split(" ").length} words and {text.length} Charecters</p>
